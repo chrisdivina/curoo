@@ -24,7 +24,7 @@ const drawerWidth = 240;
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    height: 430,
+    minHeight: '100vh',
     zIndex: 1,
     overflow: 'hidden',
     position: 'relative',
@@ -32,6 +32,9 @@ const styles = theme => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+  },
+  flex: {
+    flex: 1,
   },
   drawerPaper: {
     position: 'relative',
@@ -53,38 +56,32 @@ class Main extends Component {
     const { classes, components, children, handleClick } = this.props;
 
     return (
-      <div className={classes.appFrame}>
+      <div className={classes.root}>
         <AppBar
-          position="absolute" className={classes.appBar}
+          position="absolute"
+          className={classes.appBar}
         >
           <Toolbar>
-            <Typography variant="title" color="inherit" noWrap>
-              Persistent drawer
+            <Typography variant="title" color="inherit" className={classes.flex} noWrap>
+              Curoo
             </Typography>
             <div>
-              <IconButton>
+              <IconButton color="inherit">
                 <ColorLensIcon />
               </IconButton>
-              <IconButton>
+              <IconButton color="inherit">
                 <ViewCompactIcon />
               </IconButton>
             </div>
           </Toolbar>
         </AppBar>
         <Drawer
-          variant="persistent"
-          anchor='left'
-          open={open}
+          variant="permanent"
           classes={{
             paper: classes.drawerPaper,
           }}
         >
-          <div className={classes.drawerHeader}>
-            <IconButton onClick={this.handleDrawerClose}>
-              <ChevronRightIcon />
-            </IconButton>
-          </div>
-          <Divider />
+          <div className={classes.toolbar} />
           <List>
             { components.map( component => (
               <ListItem button onClick={ () => handleClick(component) }>
@@ -93,13 +90,8 @@ class Main extends Component {
             )) }
           </List>
         </Drawer>
-        <main
-            className={classNames(classes.content, classes[`content-${anchor}`], {
-              [classes.contentShift]: open,
-              [classes[`contentShift-${anchor}`]]: open,
-            })}
-          >
-          <div className={classes.drawerHeader} />
+        <main className={classes.content}>
+          <div className={classes.toolbar} />
           {children}
         </main>
       </div>
