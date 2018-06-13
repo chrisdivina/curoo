@@ -1,12 +1,16 @@
 import { combineReducers } from 'redux';
-import skills from './skills';
-import content from './content';
+import areas from './areas';
 import components from './components';
+import content from './content';
 import payload from './payload';
+import sections from './sections';
+import skills from './skills';
 
 export default combineReducers({
-  skills,
-  content,
+  areas,
   components,
-  payload
+  content,
+  payload,
+  sections,
+  skills
 });
