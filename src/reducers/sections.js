@@ -18,7 +18,7 @@ export const removeSectionFromState = id => {
   }
 }
 
-export default (state = {}, action) {
+export default (state = {}, action) => {
   switch (action.type) {
     case ADD_SECTION:
       const id = uniqid();

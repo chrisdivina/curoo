@@ -18,10 +18,10 @@ export const addComponentToState = (name, title = '') => {
   }
 };
 
-export default (state = initialState, action) => {
+export default (state = {}, action) => {
   switch (action.type) {
     case DELETE_COMPONENT:
-      const { [action.id], ...rest };
+      const { [action.id]: value, ...rest } = state;
       return { ...rest };
     case ADD_COMPONENT:
       const id = uniquid();
