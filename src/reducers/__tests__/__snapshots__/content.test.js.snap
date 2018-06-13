@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the content reducer should create an element 1`] = `
+Object {
+  "items": Object {
+    "e1": Object {
+      "attachedTo": "s1",
+      "id": "e1",
+      "name": "myFirstElement",
+      "params": Object {
+        "title": "First Element",
+      },
+      "pending": true,
+    },
+  },
+  "sections": Object {
+    "s1": Array [
+      "e1",
+    ],
+  },
+}
+`;
+
+exports[`the content reducer should create an element 2`] = `
+Object {
+  "items": Object {
+    "e1": Object {
+      "attachedTo": "s1",
+      "id": "e1",
+      "name": "myFirstElement",
+      "params": Object {
+        "title": "First Element",
+      },
+      "pending": true,
+    },
+    "e2": Object {
+      "attachedTo": "s1",
+      "id": "e2",
+      "name": "mySecondElement",
+      "params": Object {
+        "title": "Second Element",
+      },
+      "pending": true,
+    },
+  },
+  "sections": Object {
+    "s1": Array [
+      "e1",
+      "e2",
+    ],
+  },
+}
+`;
+
+exports[`the content reducer should create an element 3`] = `
+Object {
+  "items": Object {
+    "e1": Object {
+      "attachedTo": "s1",
+      "id": "e1",
+      "name": "myFirstElement",
+      "params": Object {
+        "title": "First Element",
+      },
+      "pending": true,
+    },
+    "e2": Object {
+      "attachedTo": "s1",
+      "id": "e2",
+      "name": "mySecondElement",
+      "params": Object {
+        "title": "Second Element",
+      },
+      "pending": true,
+    },
+    "e3": Object {
+      "attachedTo": "s2",
+      "id": "e3",
+      "name": "myThirdElement",
+      "params": Object {
+        "title": "Third Element",
+      },
+      "pending": true,
+    },
+  },
+  "sections": Object {
+    "s1": Array [
+      "e1",
+      "e2",
+    ],
+    "s2": Array [
+      "e3",
+    ],
+  },
+}
+`;
+
+exports[`the content reducer should drag an element 1`] = `
+Object {
+  "items": Object {
+    "e1": Object {
+      "attachedTo": "s2",
+      "id": "e1",
+      "name": "myFirstElement",
+      "params": Object {
+        "title": "First Element",
+      },
+      "pending": true,
+    },
+    "e2": Object {
+      "attachedTo": "s2",
+      "id": "e2",
+      "name": "mySecondElement",
+      "params": Object {
+        "title": "Second Element",
+      },
+      "pending": false,
+    },
+    "e3": Object {
+      "attachedTo": "s2",
+      "id": "e3",
+      "name": "myThirdElement",
+      "params": Object {
+        "title": "Third Element",
+      },
+      "pending": false,
+    },
+  },
+  "sections": Object {
+    "s1": Array [],
+    "s2": Array [
+      "e1",
+      "e2",
+      "e3",
+    ],
+  },
+}
+`;
+
+exports[`the content reducer should move an element 1`] = `
+Object {
+  "items": Object {
+    "e1": Object {
+      "attachedTo": "s1",
+      "id": "e1",
+      "name": "myFirstElement",
+      "params": Object {
+        "title": "First Element",
+      },
+      "pending": true,
+    },
+    "e2": Object {
+      "attachedTo": "s2",
+      "id": "e2",
+      "name": "mySecondElement",
+      "params": Object {
+        "title": "Second Element",
+      },
+      "pending": false,
+    },
+    "e3": Object {
+      "attachedTo": "s2",
+      "id": "e3",
+      "name": "myThirdElement",
+      "params": Object {
+        "title": "Third Element",
+      },
+      "pending": true,
+    },
+  },
+  "sections": Object {
+    "s1": Array [
+      "e1",
+    ],
+    "s2": Array [
+      "e3",
+      "e2",
+    ],
+  },
+}
+`;
+
+exports[`the content reducer should move an element 2`] = `
+Object {
+  "items": Object {
+    "e1": Object {
+      "attachedTo": "s1",
+      "id": "e1",
+      "name": "myFirstElement",
+      "params": Object {
+        "title": "First Element",
+      },
+      "pending": true,
+    },
+    "e2": Object {
+      "attachedTo": "s2",
+      "id": "e2",
+      "name": "mySecondElement",
+      "params": Object {
+        "title": "Second Element",
+      },
+      "pending": false,
+    },
+    "e3": Object {
+      "attachedTo": "s2",
+      "id": "e3",
+      "name": "myThirdElement",
+      "params": Object {
+        "title": "Third Element",
+      },
+      "pending": false,
+    },
+  },
+  "sections": Object {
+    "s1": Array [
+      "e1",
+    ],
+    "s2": Array [
+      "e2",
+      "e3",
+    ],
+  },
+}
+`;
+
+exports[`the content reducer should move an element 3`] = `
+Object {
+  "items": Object {
+    "e1": Object {
+      "attachedTo": "s2",
+      "id": "e1",
+      "name": "myFirstElement",
+      "params": Object {
+        "title": "First Element",
+      },
+      "pending": false,
+    },
+    "e2": Object {
+      "attachedTo": "s2",
+      "id": "e2",
+      "name": "mySecondElement",
+      "params": Object {
+        "title": "Second Element",
+      },
+      "pending": false,
+    },
+    "e3": Object {
+      "attachedTo": "s2",
+      "id": "e3",
+      "name": "myThirdElement",
+      "params": Object {
+        "title": "Third Element",
+      },
+      "pending": false,
+    },
+  },
+  "sections": Object {
+    "s1": Array [],
+    "s2": Array [
+      "e2",
+      "e1",
+      "e3",
+    ],
+  },
+}
+`;
+
+exports[`the content reducer should move an element 4`] = `
+Object {
+  "items": Object {
+    "e1": Object {
+      "attachedTo": "s2",
+      "id": "e1",
+      "name": "myFirstElement",
+      "params": Object {
+        "title": "First Element",
+      },
+      "pending": false,
+    },
+    "e2": Object {
+      "attachedTo": "s2",
+      "id": "e2",
+      "name": "mySecondElement",
+      "params": Object {
+        "title": "Second Element",
+      },
+      "pending": false,
+    },
+    "e3": Object {
+      "attachedTo": "s2",
+      "id": "e3",
+      "name": "myThirdElement",
+      "params": Object {
+        "title": "Third Element",
+      },
+      "pending": false,
+    },
+  },
+  "sections": Object {
+    "s1": Array [],
+    "s2": Array [
+      "e1",
+      "e2",
+      "e3",
+    ],
+  },
+}
+`;
+
+exports[`the content reducer should remove an element 1`] = `
+Object {
+  "items": Object {
+    "e1": Object {
+      "attachedTo": "s2",
+      "id": "e1",
+      "name": "myFirstElement",
+      "params": Object {
+        "title": "First Element",
+      },
+      "pending": true,
+    },
+    "e3": Object {
+      "attachedTo": "s2",
+      "id": "e3",
+      "name": "myThirdElement",
+      "params": Object {
+        "title": "Third Element",
+      },
+      "pending": false,
+    },
+  },
+  "sections": Object {
+    "s1": Array [],
+    "s2": Array [
+      "e1",
+      "e3",
+    ],
+  },
+}
+`;

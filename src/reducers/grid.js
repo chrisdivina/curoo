@@ -3,12 +3,21 @@
 // grids: [
 //  {
 //    id,
-//    options: {}, // all grid css available
-//    areas: [
-//      {
-//        id,
-//        options: {} // all grid area css available
-//      }
-//    ]
+//    gap,
+//    templates: {
+//      rows: [],
+//      columns: [],
+//      areas: [],
+//    },
+//   }
+// }
+//
+// export default (state = [], action) => {
+//   switch (action.type) {
+//     case expression:
+//
+//       break;
+//     default: return state;
+//
 //   }
 // }
