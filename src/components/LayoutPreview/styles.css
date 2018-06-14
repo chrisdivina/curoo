@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+  justify-items: stretch;
+  align-items: stretch;
+  background: #ccc;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+}
