@@ -49,7 +49,7 @@ const Layout = (props) => {
         <input type="text" />
       </div>
       <div>
-        <LayoutPreview grid={grid} />
+        <LayoutPreview />
       </div>
     </Fragment>
   )

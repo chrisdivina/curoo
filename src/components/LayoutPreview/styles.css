@@ -2,12 +2,21 @@
   display: grid;
   justify-items: stretch;
   align-items: stretch;
-  background: #ccc;
+  height: 70vh;
+}
+
+.header {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .item {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ddd;
+  background-color: #eee;
+  border: 1px dashed #ccc;
 }

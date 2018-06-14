@@ -17,7 +17,7 @@ export const updateGapInState = ({ row, column }) => {
   }
 }
 
-export const addRowToState = (height = '150px', name = '') => {
+export const addRowToState = (height = '1fr', name = '') => {
   return {
     type: ADD_ROW,
     height,
@@ -128,7 +128,7 @@ export default (state = initialState, action) => {
           rows: {
             ...remainingRows
           },
-          rowsById: state.templates.rowsById.filter(rowId => rowId !== action.Id)
+          rowsById: state.templates.rowsById.filter(rowId => rowId !== action.id)
         }
       };
     case ADD_COLUMN:
@@ -157,10 +157,8 @@ export default (state = initialState, action) => {
         ...state,
         templates: {
           ...state.templates,
-          columns: {
-            ...remainingColumns
-          },
-          columnsById: state.templates.columnsById.filter(columnId => columnId !== action.Id)
+          columns: {...remainingColumns},
+          columnsById: state.templates.columnsById.filter(columnId => columnId !== action.id)
         }
       };
     case ADD_AREA:

@@ -1,4 +1,7 @@
 import React from 'react';
+import withGrid from 'hoc/withGrid';
+import ColumnHeader from './ColumnHeader';
+import RowItems from './RowItems';
 import './styles.css';
 
 const LayoutPreview = ({grid}) => {
@@ -11,13 +14,9 @@ const LayoutPreview = ({grid}) => {
     columnsById = []
   } = templates;
 
-  const itemsCount = rowsById.length * columnsById.length;
-  const items = [];
-  for (let i = 1; i <= itemsCount; i++) {
-    items.push(<div key={i} className="item"><span>Item {i}</span></div>)
-  }
 
   // Columns
+  console.log()
   let gridTemplateColumns = columnsById.map( id => {
     const { name, width } = columns[id];
     if (name.length > 0) {
@@ -25,7 +24,7 @@ const LayoutPreview = ({grid}) => {
     }
     return `${width}`;
   });
-  gridTemplateColumns = gridTemplateColumns.join(' ');
+  gridTemplateColumns = `auto ${gridTemplateColumns.join(' ')}`;
 
   // Rows
   let gridTemplateRows = rowsById.map( id => {
@@ -35,7 +34,7 @@ const LayoutPreview = ({grid}) => {
     }
     return `${height}`;
   });
-  gridTemplateRows = gridTemplateRows.join(' ');
+  gridTemplateRows = `auto ${gridTemplateRows.join(' ')}`;
 
   const containerStyles = {
     gridTemplateColumns,
@@ -44,9 +43,25 @@ const LayoutPreview = ({grid}) => {
 
   return (
     <div className="container" style={containerStyles}>
-      {items.map(item => item)}
+      <div></div>
+      {columnsById.map((id, index) =>
+        <ColumnHeader
+          key={id}
+          index={index}
+          column={columns[id]}
+        />
+      )}
+      {rowsById.map((id, index) => (
+        <RowItems
+          key={id}
+          row={rows[id]}
+          rowId={id}
+          rowIndex={index}
+          columnsById={columnsById}
+        />
+      ))}
     </div>
   )
 };
 
-export default LayoutPreview;
+export default withGrid(LayoutPreview);

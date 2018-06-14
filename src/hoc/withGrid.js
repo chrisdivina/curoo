@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import {
   updateGapInState,
   addRowToState,
-  addColumnToState
+  addColumnToState,
+  removeColumnFromState,
+  removeRowFromState
 } from 'reducers/grid';
 
 export default function withGrid(WrappedComponent) {
@@ -12,10 +14,7 @@ export default function withGrid(WrappedComponent) {
 
     render() {
       return <WrappedComponent
-        grid={this.props.grid}
-        updateGap={this.props.updateGap}
-        insertRow={this.props.insertRow}
-        insertColumn={this.props.insertColumn}
+        {...this.props}
       />;
     }
 
@@ -30,7 +29,9 @@ export default function withGrid(WrappedComponent) {
     return {
       updateGap: settings => dispatch(updateGapInState(settings)),
       insertRow: (height, name) => dispatch(addRowToState(height, name)),
-      insertColumn: (width, name) => dispatch(addColumnToState(width, name))
+      insertColumn: (width, name) => dispatch(addColumnToState(width, name)),
+      removeColumn: id => dispatch(removeColumnFromState(id)),
+      removeRow: id => dispatch(removeRowFromState(id))
     }
   }
 
