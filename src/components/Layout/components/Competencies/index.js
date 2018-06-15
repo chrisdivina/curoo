@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withCompetencies } from 'hoc';
+import Form from './Form';
 
 class Competencies extends Component {
 
@@ -27,11 +28,7 @@ class Competencies extends Component {
             Add Competency
           </button>
         }
-        {create &&
-          <div>
-            New Competency
-          </div>
-        }
+        {create && <Form />}
       </div>
     );
   }

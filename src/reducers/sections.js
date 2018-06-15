@@ -3,6 +3,18 @@ import uniqid from 'uniqid';
 const ADD_SECTION = 'section/add';
 const REMOVE_SECTION = 'section/remove';
 
+// section: {
+//  items: {
+//    id: {
+//      id: '',
+//      title: '',
+//      params: {},
+//      children: []
+//    },
+//  },
+//  itemsById: []
+// }
+
 export const addSectionToState = (id, area, component) => {
   return {
     type: ADD_SECTION,

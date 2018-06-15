@@ -12,9 +12,11 @@ const initialState = {
   skills: {}
 }
 
-export const addStoreCompetency = () => {
+export const addStoreCompetency = params => {
   return {
-    type: ADD_COMPETENCY
+    type: ADD_COMPETENCY,
+    id: uniqid(),
+    params
   }
 };
 
@@ -23,9 +25,16 @@ export default (state = initialState, action) => {
     case ADD_COMPETENCY:
       return {
         ...state,
+        items: {
+          ...state.items,
+          [action.id]: {
+            id: action.id,
+            ...action.params
+          }
+        },
         itemsById: [
           ...state.itemsById,
-          uniqid()
+          action.id
         ]
       };
     case UPDATE_COMPETENCY:

@@ -15,7 +15,7 @@ const withCompetencies = (Component) => {
 
   const mapDispatchToProps = dispatch => {
     return {
-      addCompetency: () => dispatch(addStoreCompetency())
+      addCompetency: params => dispatch(addStoreCompetency(params))
     }
   }
 
