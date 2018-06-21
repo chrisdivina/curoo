@@ -1,0 +1,105 @@
+{
+  "name": "Christophe Divina",
+  "title": "Senior Front-End Developer",
+  "summary": "I focus on designing rich and clean user experience as well as delivering fast and responsive interfaces. I constantly keep myself up to date about the latest technology, which enables me to provide workable solutions rather than pointing out problems.",
+  "experience": {
+    "work": {
+      "title": "Professional Experience",
+      "items": [
+        {
+          "title": "Senior Web Developer",
+          "organization": "Amplefuture",
+          "url": "http://www.amplefuture.com/",
+          "location": "London, UK",
+          "start": "May 2016",
+          "end": null,
+          "description": "",
+          "tasks": [
+            "Front-end development of large-scale e-commerce websites",
+            "Development of web tools and applications with JavaScript, React JS and jQuery",
+            "Code analysis and refactoring to improve performance and speed of websites",
+            "Introduction of NodeJS, Gulp and Webpack to improve internal workflow and general web performance",
+            "PHP development that affects the front-end",
+            "Work together with a team of developpers and designers"
+          ]
+        },
+        {
+          "title": "Head of UX & Front-End Development",
+          "organization": "Culture Trip",
+          "url": "https://theculturetrip.com",
+          "location": "London, UK",
+          "start": "Oct 2015",
+          "end": "May 2016",
+          "description": "",
+          "tasks": [
+            "Design and mockup creation with Sketch",
+            "Front-end development: implementation and maintenance of the new design",
+            "Back-end development: Worpdress Themes and Plugins Development, Migrating an XML-based CMS to Wordpress, SQL requests optimisation, API creation for our mobile application",
+            "Working with AWS to monitor server performances, managing our S3 storage, and setting file permissions",
+            "Liasing together with our team of engineers based in Tel Aviv on a daily basis",
+            "Analysing analytics to improve UX and increase traffic"
+          ]
+        },
+        {
+          "title": "Web Designer & Front-End Developer",
+          "organization": "Amplefuture",
+          "url": "http://www.amplefuture.com/",
+          "location": "London, UK",
+          "start": "Nov 2013",
+          "end": "Oct 2015",
+          "description": "",
+          "tasks": [
+            "In charge of the front-end development and maintainance of all our websites, including large-scale e-commerce platforms and javascript-based web applications",
+            "Collaborating closely with the back-end development team to ensure great coordination with the front-end code",
+            "Working together with the Marketing & Design Director to offer workable design solutions according to clients’ specifications within a given timeframe"
+          ]
+        },
+        {
+          "title": "Web Designer & Front-End Developer",
+          "organization": "S2Media",
+          "url": "",
+          "location": "Brussels, Belgium",
+          "start": "Oct 2012",
+          "end": "Oct 2013",
+          "description": "",
+          "tasks": [
+            "Design and front-end development of Facebook applications, web applications, websites and HTML emails",
+            "Production of all graphic elements, including mockups and image optimisation."
+          ]
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "title": "MA, Digital Media",
+          "options": "",
+          "mention": "Pass with Distinction",
+          "organization": "London Metropolitan University",
+          "url": "http://www.londonmet.ac.uk/courses/postgraduate/digital-media---ma/",
+          "location": "London, UK",
+          "end": "2011"
+        },
+        {
+          "title": "BA, International Business",
+          "options": "English and Spanish",
+          "mention": "",
+          "organization": "Université Paul-Verlaine",
+          "url": "http://all-metz.univ-lorraine.fr/formations/langues-etrangeres-appliquees",
+          "location": "Metz, France",
+          "end": "2006"
+        },
+        {
+          "title": "Diploma in Computing",
+          "options": "",
+          "mention": "",
+          "organization": "Institut Universitaire Technologique ",
+          "url": "https://www.iut-metz.univ-lorraine.fr/index.php/les-formations/le-dut/dut-info",
+          "location": "Metz, France",
+          "end": "2002"
+        }
+      ]
+    }
+  }
+}
