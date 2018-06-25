@@ -11,8 +11,8 @@
           "organization": "Amplefuture",
           "url": "http://www.amplefuture.com/",
           "location": "London, UK",
-          "start": "May 2016",
-          "end": null,
+          "startDate": "May 2016",
+          "endDate": null,
           "description": "",
           "tasks": [
             "Front-end development of large-scale e-commerce websites",
@@ -28,8 +28,8 @@
           "organization": "Culture Trip",
           "url": "https://theculturetrip.com",
           "location": "London, UK",
-          "start": "Oct 2015",
-          "end": "May 2016",
+          "startDate": "Oct 2015",
+          "endDate": "May 2016",
           "description": "",
           "tasks": [
             "Design and mockup creation with Sketch",
@@ -45,8 +45,8 @@
           "organization": "Amplefuture",
           "url": "http://www.amplefuture.com/",
           "location": "London, UK",
-          "start": "Nov 2013",
-          "end": "Oct 2015",
+          "startDate": "Nov 2013",
+          "endDate": "Oct 2015",
           "description": "",
           "tasks": [
             "In charge of the front-end development and maintainance of all our websites, including large-scale e-commerce platforms and javascript-based web applications",
@@ -59,8 +59,8 @@
           "organization": "S2Media",
           "url": "",
           "location": "Brussels, Belgium",
-          "start": "Oct 2012",
-          "end": "Oct 2013",
+          "startDate": "Oct 2012",
+          "endDate": "Oct 2013",
           "description": "",
           "tasks": [
             "Design and front-end development of Facebook applications, web applications, websites and HTML emails",
@@ -79,7 +79,7 @@
           "organization": "London Metropolitan University",
           "url": "http://www.londonmet.ac.uk/courses/postgraduate/digital-media---ma/",
           "location": "London, UK",
-          "end": "2011"
+          "endDate": "2011"
         },
         {
           "title": "BA, International Business",
@@ -88,7 +88,7 @@
           "organization": "Université Paul-Verlaine",
           "url": "http://all-metz.univ-lorraine.fr/formations/langues-etrangeres-appliquees",
           "location": "Metz, France",
-          "end": "2006"
+          "endDate": "2006"
         },
         {
           "title": "Diploma in Computing",
@@ -97,7 +97,7 @@
           "organization": "Institut Universitaire Technologique ",
           "url": "https://www.iut-metz.univ-lorraine.fr/index.php/les-formations/le-dut/dut-info",
           "location": "Metz, France",
-          "end": "2002"
+          "endDate": "2002"
         }
       ]
     }

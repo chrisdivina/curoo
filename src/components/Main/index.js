@@ -14,3 +14,5 @@ const Main = ({data}) => {
     </div>
   )
 }
+
+export default Main;

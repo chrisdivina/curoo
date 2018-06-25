@@ -4,7 +4,7 @@ const Job = ({job}) => {
 
   const { endDate = '', startDate, url } = job;
   const dates = endDate && endDate.length > 0 ? `${startDate} - ${endDate}` : `Since ${startDate}`;
-  const company = url && url.length > 0 ? <a href={url}>{job.organization}<a> : job.organization;
+  const company = url && url.length > 0 ? <a href={url}>{job.organization}</a> : job.organization;
 
   return (
     <div>

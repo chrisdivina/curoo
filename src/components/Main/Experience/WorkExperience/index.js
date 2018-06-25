@@ -11,4 +11,6 @@ const WorkExperience = ({work}) => {
       ))}
     </div>
   )
-}
+};
+
+export default WorkExperience;
