@@ -1,17 +1,38 @@
+import uniquid from 'uniqid';
 
-const initialState = [
-  {
-    title: 'Profile Picture',
-    name: 'ProfilePicture'
-  },
-  {
-    title: 'Skills',
-    name: 'SkillForm'
+const DELETE_COMPONENT = 'component/delete';
+const ADD_COMPONENT = 'component/add';
+
+export const removeComponentFromState = id => {
+  return {
+    type: DELETE_COMPONENT,
+    id
   }
-];
+};
 
-export default (state = initialState, action) => {
+export const addComponentToState = (name, title = '') => {
+  return {
+    type: ADD_COMPONENT,
+    title,
+    name
+  }
+};
+
+export default (state = {}, action) => {
   switch (action.type) {
+    case DELETE_COMPONENT:
+      const { [action.id]: value, ...rest } = state;
+      return { ...rest };
+    case ADD_COMPONENT:
+      const id = uniquid();
+      return {
+        ...state,
+        [id]: {
+          id,
+          title: action.tile,
+          name: action.name
+        }
+      }
     default: return state;
   }
 }

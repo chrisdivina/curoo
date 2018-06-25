@@ -1,7 +1,9 @@
 import uniqid from 'uniqid';
 import reducer, {
-  addElementToState,
-  deleteElementFromState
+  createElementInState,
+  moveElementInState,
+  deleteElementFromState,
+  dragElementInState
 } from '../content';
 
 jest.mock('uniqid');
@@ -12,12 +14,6 @@ let result;
 
 describe('the content reducer', () => {
 
-  it('should return an empty array', () => {
-    state = undefined;
-    result = reducer(state, action);
-    expect(result).toEqual([]);
-  });
-
   it('should return the current state', () => {
     state = 'current';
     action = { type: 'unknown' };
@@ -25,30 +21,60 @@ describe('the content reducer', () => {
     expect(result).toEqual('current');
   });
 
-  it('should add an element', () => {
-    uniqid.mockReturnValueOnce('myId');
-    state = [];
-    action = addElementToState('myElement');
+  it('should return the initial state', () => {
+    state = undefined;
     result = reducer(state, action);
-    expect(uniqid).toHaveBeenCalled();
-    expect(result).toEqual([
-      {
-        id: 'myId',
-        name: 'myElement'
-      }
-    ]);
+    expect(result).toEqual({
+      items: {},
+      sections: {}
+    });
+  });
+
+  it('should create an element', () => {
+    uniqid.mockReturnValueOnce('e1');
+    action = createElementInState('myFirstElement', { title: 'First Element'}, 's1');
+    state = reducer(state, action);
+    expect(state).toMatchSnapshot();
+
+    uniqid.mockReturnValueOnce('e2');
+    action = createElementInState('mySecondElement', { title: 'Second Element'}, 's1');
+    state = reducer(state, action);
+    expect(state).toMatchSnapshot();
+
+    uniqid.mockReturnValueOnce('e3');
+    action = createElementInState('myThirdElement', { title: 'Third Element'}, 's2');
+    state = reducer(state, action);
+    expect(state).toMatchSnapshot();
+  });
+
+  it('should move an element', () => {
+    action = moveElementInState('e2', 's2', 1);
+    state = reducer(state, action);
+    expect(state).toMatchSnapshot();
+
+    action = moveElementInState('e3', 's2', 1);
+    state = reducer(state, action);
+    expect(state).toMatchSnapshot();
+
+    action = moveElementInState('e1', 's2', 1);
+    state = reducer(state, action);
+    expect(state).toMatchSnapshot();
+
+    action = moveElementInState('e1', 's2', 0);
+    state = reducer(state, action);
+    expect(state).toMatchSnapshot();
+  });
+
+  it('should drag an element', () => {
+    action = dragElementInState('e1');
+    state = reducer(state, action);
+    expect(state).toMatchSnapshot();
   });
 
   it('should remove an element', () => {
-    state = [
-      {
-        id: 'myId',
-        name: 'myElement'
-      }
-    ];
-    action = deleteElementFromState('myId');
-    result = reducer(state, action);
-    expect(result).toEqual([]);
+    action = deleteElementFromState('e2');
+    state = reducer(state, action);
+    expect(state).toMatchSnapshot();
   });
 
 });

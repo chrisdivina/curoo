@@ -1,0 +1,4 @@
+.root {
+  display: grid;
+  grid-template-columns: auto minmax(auto, 600px);
+}
