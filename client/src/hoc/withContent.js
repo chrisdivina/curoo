@@ -1,28 +1,37 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { fetchData } from '../reducers/content';
 
-function withContent(WrappedComponent) {
+export default function withContent(WrappedComponent) {
 
-  class Content extends Component {
+  class Content extends PureComponent {
 
     render() {
-      <WrappedComponent {...this.props} />
+      return <WrappedComponent {...this.props} />;
     }
 
   }
 
   const mapStateToProps = state => {
     const {
-      payload = {},
       content = {}
     } = state;
-    const { isLoading = true } = payload
+    const {
+      isLoading = true,
+      data = {}
+    } = content;
     return {
       isLoading,
-      content
+      data
     };
   }
 
-  return connect(mapStateToProps)(Content);
+  const mapDispatchToProps = dispatch => {
+    return {
+      onFetch: dispatch(fetchData())
+    }
+  }
+
+  return connect(mapStateToProps, mapDispatchToProps)(Content);
 
 }

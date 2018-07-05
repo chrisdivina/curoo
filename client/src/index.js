@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-import data from './data.json';
+import store from './store';
+import { Provider } from 'react-redux';
 
 ReactDOM.render(
-  <App data={data} />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
