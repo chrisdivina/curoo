@@ -1,17 +1,13 @@
 import React, { Fragment } from 'react';
 import withContent from '../hoc/withContent';
 import Main from './Main';
+import Preloader from './Preloader';
 
 const App = ({ isLoading = true, data = {} }) => {
-  console.log(data);
   return (
     <Fragment>
-      { isLoading &&
-        <p>Loading data....</p>
-      }
-      { !isLoading &&
-        <Main data={data}/>
-      }
+      { isLoading && <Preloader /> }
+      { !isLoading && <Main data={data}/> }
     </Fragment>
   )
 }

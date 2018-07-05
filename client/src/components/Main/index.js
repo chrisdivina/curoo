@@ -1,10 +1,13 @@
 import React from 'react';
 import Header from './Header';
 import Experience from './Experience';
+import styles from './styles.css';
+
+console.log(styles);
 
 const Main = ({data}) => {
   return (
-    <div>
+    <div className={styles.root}>
       <Header
         name={data.name}
         title={data.title}
