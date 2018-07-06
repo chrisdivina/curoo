@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import * as styles from './styles';
+import styles from './styles.css';
 
 const Preloader = () => {
   return (
-    <div style={styles.root}>
+    <div className={styles.root}>
       <div className="spinner">
         <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
             <g fill="none" fillRule="evenodd">
