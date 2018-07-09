@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from 'react';
-import withContent from '../hoc/withContent';
+import withApp from 'hoc/withApp';
 import Main from './Main';
 import Preloader from './Preloader';
 
@@ -19,10 +19,10 @@ class App extends Component {
     return (
       <Fragment>
         { this.props.isLoading && <Preloader /> }
-        { !this.props.isLoading && <Main data={this.props.data}/> }
+        { !this.props.isLoading && <Main /> }
       </Fragment>
     );
   }
 }
 
-export default withContent(App);
+export default withApp(App);

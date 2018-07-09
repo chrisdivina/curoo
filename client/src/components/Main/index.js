@@ -1,17 +1,16 @@
 import React from 'react';
-import withUser from 'hoc/withUser';
-import DisplayMode from './DisplayMode';
-import EditMode from './EditMode';
+import Navigation from './Navigation';
+import Content from './Content';
 import styles from './styles.css';
 
-const Main = ({ isLoggedIn = false }) => {
+const Main = () => {
 
   return (
     <div className={styles.root}>
-      { !isLoggedIn && <DisplayMode /> }
-      { isLoggedIn && <EditMode />}
+      <Navigation />
+      <Content />
     </div>
   )
 }
 
-export default withUser(Main);
+export default Main;

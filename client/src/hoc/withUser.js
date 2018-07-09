@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import {
@@ -8,22 +8,14 @@ import {
 
 const withUser = WrappedComponent => {
 
-  class User extends PureComponent {
-
-    render() {
-      return (
-        <WrappedComponent {...this.props} {...this.state} />
-      )
-    }
-
-  }
+  const User = props => <WrappedComponent {...props} />;
 
   const mapStateToProps = state => {
     const { user = {} } = state;
     const { isLoggedIn = false } = user;
     return {
       user,
-      isLoggedIn 
+      isLoggedIn
     };
   }
 

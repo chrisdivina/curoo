@@ -1,7 +1,7 @@
 import fetch from 'cross-fetch'
 
-const REQUEST_CONTENT = 'content/request';
-const RECEIVE_CONTENT = 'content/receive';
+export const REQUEST_CONTENT = 'content/request';
+export const RECEIVE_CONTENT = 'content/receive';
 
 export const requestContent = () => {
   return {
@@ -17,7 +17,6 @@ export const receiveContent = (json) => {
 }
 
 export const fetchData = () => dispatch => {
-  console.trace(); debugger;
   dispatch(requestContent());
   return fetch('http://localhost:6565/')
     .then(response => response.json())
@@ -26,16 +25,10 @@ export const fetchData = () => dispatch => {
 
 export default (state = {}, action) => {
   switch (action.type) {
-    case REQUEST_CONTENT:
-      return {
-        ...state,
-        isLoading: true
-      };
     case RECEIVE_CONTENT:
       return {
         ...state,
-        data: action.data,
-        isLoading: false
+        data: action.data
       }
     default:
       return state;

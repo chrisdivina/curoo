@@ -5,7 +5,7 @@ import withContent from 'hoc/withContent';
 import Header from './Header';
 import Experience from './Experience';
 
-const Main = ({ data }) => {
+const Content = ({ data }) => {
   return (
     <Fragment>
       <Header
@@ -18,4 +18,4 @@ const Main = ({ data }) => {
   );
 }
 
-export default withContent(Main);
+export default withContent(Content);

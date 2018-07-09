@@ -8,6 +8,8 @@ import payload from './payload';
 import sections from './sections';
 import skills from './skills';
 import user from './user';
+import app from './app';
+
 export default combineReducers({
   areas,
   competencies,
@@ -17,5 +19,6 @@ export default combineReducers({
   payload,
   sections,
   skills,
-  user
+  user,
+  app
 });
