@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Experience from './Experience';
+import Navigation from './Navigation';
 import styles from './styles.css';
 
 console.log(styles);
@@ -8,6 +9,7 @@ console.log(styles);
 const Main = ({data}) => {
   return (
     <div className={styles.root}>
+      <Navigation />
       <Header
         name={data.name}
         title={data.title}

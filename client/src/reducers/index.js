@@ -7,6 +7,7 @@ import grid from './grid';
 import payload from './payload';
 import sections from './sections';
 import skills from './skills';
+import user from './user';
 export default combineReducers({
   areas,
   competencies,
@@ -15,5 +16,6 @@ export default combineReducers({
   grid,
   payload,
   sections,
-  skills
+  skills,
+  user
 });
