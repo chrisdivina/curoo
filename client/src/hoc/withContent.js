@@ -28,7 +28,7 @@ export default function withContent(WrappedComponent) {
 
   const mapDispatchToProps = dispatch => {
     return {
-      onFetch: dispatch(fetchData())
+      onFetch: () => dispatch(fetchData())
     }
   }
 

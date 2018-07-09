@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = ({ name, title, summary }) => {
+const Header = ({ name ='', title = '', summary ='' }) => {
   return (
     <div>
       <h1>{name}</h1>

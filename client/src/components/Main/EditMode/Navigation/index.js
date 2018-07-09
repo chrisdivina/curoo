@@ -1,6 +1,7 @@
 import React from 'react';
+import withUser from 'hoc/withUser';
 
-const LoggedInNavigation = ({ onLogOut }) => {
+const Navigation = ({ onLogOut }) => {
   return (
     <nav>
       <ul>
@@ -11,4 +12,4 @@ const LoggedInNavigation = ({ onLogOut }) => {
   );
 };
 
-export default LoggedInNavigation;
+export default withUser(Navigation);

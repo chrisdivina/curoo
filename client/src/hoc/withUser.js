@@ -20,7 +20,11 @@ const withUser = WrappedComponent => {
 
   const mapStateToProps = state => {
     const { user = {} } = state;
-    return { user };
+    const { isLoggedIn = false } = user;
+    return {
+      user,
+      isLoggedIn 
+    };
   }
 
   const mapDispatchToProps = dispatch => {

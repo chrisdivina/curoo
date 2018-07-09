@@ -17,6 +17,7 @@ export const receiveContent = (json) => {
 }
 
 export const fetchData = () => dispatch => {
+  console.trace(); debugger;
   dispatch(requestContent());
   return fetch('http://localhost:6565/')
     .then(response => response.json())
