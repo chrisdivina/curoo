@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
-
-import withContent from 'hoc/withContent';
-
+import { withContent } from 'hoc';
 import Header from './Header';
 import Experience from './Experience';
 
@@ -13,7 +11,9 @@ const Content = ({ data }) => {
         title={data.title}
         summary={data.summary}
       />
-      <Experience experience={data.experience} />
+      <Experience
+        experience={data.experience}
+      />
     </Fragment>
   );
 }

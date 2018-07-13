@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import withUser from 'hoc/withUser';
+import LoggedIn from './LoggedIn';
+import LoggedOut from './LoggedOut';
 
-const Navigation = ({ isLoggedIn, onLogOut, onLogIn }) => {
+const Navigation = ({ isLoggedIn, onLogIn }) => {
   return (
-    <nav>
-      <ul>
-        { !isLoggedIn && <li onClick={onLogIn}>Login</li> }
-        { isLoggedIn && <li>Save Changes</li> }
-        { isLoggedIn && <li onClick={onLogOut}>Log Out</li> }
-      </ul>
-    </nav>
+    <Fragment>
+      { !isLoggedIn && <LoggedOut /> }
+      { isLoggedIn && <LoggedIn /> }
+    </Fragment>
   );
 };
 

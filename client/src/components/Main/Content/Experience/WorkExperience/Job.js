@@ -1,4 +1,6 @@
 import React from 'react';
+import Text from 'components/Text';
+import TextArea from 'components/TextArea';
 
 const Job = ({job}) => {
 
@@ -8,9 +10,9 @@ const Job = ({job}) => {
 
   return (
     <div>
-      <h4>{job.title}</h4>
+      <Text tag="h4">{job.title}</Text>
       <h5>{company} ({job.location}), {dates}</h5>
-      {job.description && <p>{job.description}</p>}
+      {job.description && <TextArea>{job.description}</TextArea>}
       {job.tasks && job.tasks.length > 0 &&
         <ul>
           {job.tasks.map(task => (
