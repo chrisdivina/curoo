@@ -6,8 +6,11 @@ const WorkExperience = ({work}) => {
   return (
     <div>
       <h3>{work.title}</h3>
-      { work.items.map(job => (
-        <Job job={job} />
+      { work.items.map((job, id) => (
+        <Job
+          id={id}
+          job={job}
+        />
       ))}
     </div>
   )
