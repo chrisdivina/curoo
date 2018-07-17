@@ -8,6 +8,7 @@ const WorkExperience = ({work}) => {
       <h3>{work.title}</h3>
       { work.items.map((job, id) => (
         <Job
+          key={`Job_${id}`}
           id={id}
           job={job}
         />

@@ -1,32 +1,37 @@
 import React from 'react';
 import { withUser, withContent } from 'hoc';
 import { compose } from 'utils';
-import { Button } from '@material-ui/core';
+import { 
+  AppBar,
+  Toolbar,
+  Typography,
+  Badge,
+  Button 
+} from '@material-ui/core';
 
 const LoggedIn = ({ onLogOut, isUpdated = false }) => {
   return (
-    <nav>
-      <ul>
-        <li>
+    <AppBar position="fixed">
+      <Toolbar>
+        <div>
           <Button
-            variant="contained"
-            color="primary"
+            color="inherit"
             disabled={!isUpdated}
           >
             Save Changes
           </Button>
-        </li>
-        <li >
+          <Badge color="secondary" badgeContent={1}>
+            <Button color="inherit">Drafts</Button>
+          </Badge>
           <Button
-            variant="contained"
-            color="secondary"
+            color="inherit"
             onClick={onLogOut}
           >
             Log Out
           </Button>
-        </li>
-      </ul>
-    </nav>
+        </div>
+      </Toolbar>
+    </AppBar>
   )
 }
 
