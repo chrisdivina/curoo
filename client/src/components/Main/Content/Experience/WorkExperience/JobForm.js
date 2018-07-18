@@ -153,9 +153,9 @@ class JobForm extends Component {
             onChange={this.handleOnChange}
           />
           <TextField
-            id="decription"
+            id="description"
             label="Job Description"
-            value={job.description}
+            defaultValue={job.description}
             margin="normal"
             multiline
             rows="4"
